@@ -21,6 +21,15 @@ public class ModItems {
             .food(ModFoods.TOMATO, ModFoods.TOMATO_CONSUMABLE)));
     public static final Item ONION = registerItem("onion", properties -> new Item(properties
             .food(ModFoods.ONION, ModFoods.ONION_CONSUMABLE)));
+    public static final Item SCRAMBLED_EGGS = registerItem("scrambled_eggs", properties -> new Item(properties
+            .food(ModFoods.SCRAMBLED_EGGS, ModFoods.SCRAMBLED_EGGS_CONSUMABLE)));
+    public static final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
+            .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE)));
+    public static final Item BOILED_EGG = registerItem("boiled_egg", properties -> new Item(properties
+            .food(ModFoods.BOILED_EGG, ModFoods.BOILED_EGG_CONSUMABLE)));
+
+    public static final Item HARD_BOILED_EGG = registerItem("hard_boiled_egg", Item::new);
+    public static final Item EGG_SHELL = registerItem("egg_shell", Item::new);
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
@@ -35,6 +44,11 @@ public class ModItems {
             output.accept(STRAWBERRY);
             output.accept(TOMATO);
             output.accept(ONION);
+            output.accept(HARD_BOILED_EGG);
+            output.accept(BOILED_EGG);
+            output.accept(SCRAMBLED_EGGS);
+            output.accept(FRIED_EGG);
+            output.accept(EGG_SHELL);
         });
     }
 }

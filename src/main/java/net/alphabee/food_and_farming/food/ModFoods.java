@@ -11,15 +11,25 @@ public class ModFoods {
     public static final FoodProperties STRAWBERRY = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f).build();
     public static final FoodProperties TOMATO = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f).build();
     public static final FoodProperties ONION = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f).build();
+    public static final FoodProperties BOILED_EGG = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f).build();
+    public static final FoodProperties SCRAMBLED_EGGS = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f).build();
+    public static final FoodProperties FRIED_EGG = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f).build();
+
 
     public static final Consumable STRAWBERRY_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1f).build();
     public static final Consumable TOMATO_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1f).build();
-                                                                                                                    //20 ticks = 1 second
+    //20 ticks = 1 second
     public static final Consumable ONION_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NAUSEA, 10 * 20, 255), 0.30f))
             .build();
+    public static final Consumable BOILED_EGG_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1f).build();
+    public static final Consumable SCRAMBLED_EGGS_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1f).build();
+    public static final Consumable FRIED_EGG_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1f).build();
 
 
 }

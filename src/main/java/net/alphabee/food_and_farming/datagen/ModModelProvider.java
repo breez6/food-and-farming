@@ -22,5 +22,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.STRAWBERRY, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.TOMATO, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ONION, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.HARD_BOILED_EGG, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SCRAMBLED_EGGS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.FRIED_EGG , ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BOILED_EGG , ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.EGG_SHELL , ModelTemplates.FLAT_ITEM);
     }
 }

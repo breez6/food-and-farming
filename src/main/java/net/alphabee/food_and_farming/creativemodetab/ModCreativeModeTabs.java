@@ -21,6 +21,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.STRAWBERRY);
                         output.accept(ModItems.TOMATO);
                         output.accept(ModItems.ONION);
+                        output.accept(ModItems.HARD_BOILED_EGG);
+                        output.accept(ModItems.SCRAMBLED_EGGS);
+                        output.accept(ModItems.FRIED_EGG);
+                        output.accept(ModItems.BOILED_EGG);
+                        output.accept(ModItems.EGG_SHELL);
 
                     }).build());
 
