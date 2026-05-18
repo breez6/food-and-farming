@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "food-and-farming:item/scrambled_eggs"
+  }
+}
