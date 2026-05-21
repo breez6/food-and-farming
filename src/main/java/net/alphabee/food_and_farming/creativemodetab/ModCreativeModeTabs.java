@@ -40,7 +40,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.tutorialmod.salt_rock"))
                     .displayItems((parameters, output) -> {
 
-                        output.accept(ModItems.SALT_ROCK);
+                        output.accept(ModBlocks.SALT_ROCK);
 
 
                     }).build());
