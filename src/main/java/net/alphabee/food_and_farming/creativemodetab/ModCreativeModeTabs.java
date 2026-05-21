@@ -26,16 +26,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FRIED_EGG);
                         output.accept(ModItems.BOILED_EGG);
                         output.accept(ModItems.EGG_SHELL);
+                        output.accept(ModItems.SALT);
+                        output.accept(ModItems.UNRIPENED_PEPPERCORN);
+                        output.accept(ModItems.BLACK_PEPPER);
+                        output.accept(ModItems.DRIED_PEPPERCORN);
+
 
                     }).build());
 
     public static final CreativeModeTab BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, "fluorite_blocks"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.FLUORITE_BLOCK))
-                    .title(Component.translatable("creativemodetab.tutorialmod.fluorite_blocks"))
+            Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, "salt_rock"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SALT_ROCK))
+                    .title(Component.translatable("creativemodetab.tutorialmod.salt_rock"))
                     .displayItems((parameters, output) -> {
 
-                        //for adding blocks
+                        output.accept(ModItems.SALT_ROCK);
 
 
                     }).build());

@@ -30,6 +30,10 @@ public class ModItems {
 
     public static final Item HARD_BOILED_EGG = registerItem("hard_boiled_egg", Item::new);
     public static final Item EGG_SHELL = registerItem("egg_shell", Item::new);
+    public static final Item SALT = registerItem("salt", Item::new);
+    public static final Item UNRIPENED_PEPPERCORN = registerItem("unriped_peppercorn", Item::new);
+    public static final Item BLACK_PEPPER = registerItem("black_pepper", Item::new);
+    public static final Item DRIED_PEPPERCORN = registerItem("dried_peppercorn", Item::new);
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
@@ -49,6 +53,10 @@ public class ModItems {
             output.accept(SCRAMBLED_EGGS);
             output.accept(FRIED_EGG);
             output.accept(EGG_SHELL);
+            output.accept(SALT);
+            output.accept(UNRIPENED_PEPPERCORN);
+            output.accept(BLACK_PEPPER);
+            output.accept(DRIED_PEPPERCORN);
         });
     }
 }

@@ -21,70 +21,11 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.function.Function;
 
 public class ModBlocks {
-    public static final Block FLUORITE_BLOCK = registerBlock("fluorite_block",
+
+    public static final Block SALT_ROCK = registerBlock("salt_rock",
             properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-    public static final Block RAW_FLUORITE_BLOCK = registerBlock("raw_fluorite_block",
-            properties -> new Block(properties.strength(3f)
-                    .requiresCorrectToolForDrops()));
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).mapColor(MapColor.TERRACOTTA_WHITE)));
 
-    public static final Block FLUORITE_ORE = registerBlock("fluorite_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(2, 5),
-                    properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-    public static final Block FLUORITE_DEEPSLATE_ORE = registerBlock("fluorite_deepslate_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(3, 6),
-                    properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
-
-    public static final Block FLUORITE_NETHER_ORE = registerBlock("fluorite_nether_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(1, 5),
-                    properties.strength(3f).requiresCorrectToolForDrops()));
-    public static final Block FLUORITE_END_ORE = registerBlock("fluorite_end_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(4, 8),
-                    properties.strength(6f).requiresCorrectToolForDrops()));
-
-
-    public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
-            properties -> new StairBlock(ModBlocks.FLUORITE_BLOCK.defaultBlockState(),
-                    properties.strength(3f).requiresCorrectToolForDrops()));
-    public static final Block FLUORITE_SLAB = registerBlock("fluorite_slab",
-            properties -> new SlabBlock(properties.strength(3f).requiresCorrectToolForDrops()));
-
-    public static final Block FLUORITE_BUTTON = registerBlock("fluorite_button",
-            properties -> new ButtonBlock(BlockSetType.IRON, 20,
-                    properties.strength(3f).noCollision()));
-    public static final Block FLUORITE_PRESSURE_PLATE = registerBlock("fluorite_pressure_plate",
-            properties -> new PressurePlateBlock(BlockSetType.IRON,
-                    properties.mapColor(MapColor.COLOR_BLUE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
-                            .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
-
-    public static final Block FLUORITE_FENCE = registerBlock("fluorite_fence",
-            properties -> new FenceBlock(properties.strength(3f).requiresCorrectToolForDrops()));
-    public static final Block FLUORITE_FENCE_GATE = registerBlock("fluorite_fence_gate",
-            properties -> new FenceGateBlock(WoodType.ACACIA,
-                    properties.strength(3f).requiresCorrectToolForDrops()));
-    public static final Block FLUORITE_WALL = registerBlock("fluorite_wall",
-            properties -> new WallBlock(properties.strength(3f).requiresCorrectToolForDrops()));
-
-    public static final Block FLUORITE_DOOR = registerBlock("fluorite_door",
-            properties -> new DoorBlock(BlockSetType.IRON, properties.strength(3f)
-                    .requiresCorrectToolForDrops().noOcclusion()));
-    public static final Block FLUORITE_TRAPDOOR = registerBlock("fluorite_trapdoor",
-            properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(3f)
-                    .requiresCorrectToolForDrops().noOcclusion()));
-
-
-
-    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
-        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, name))));
-        registerBlockItem(name, toRegister, tooltips);
-        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, name), toRegister);
-    }
-
-    private static void registerBlockItem(String name, Block block, Component... tooltips) {
-        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, name),
-                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, name)))));
-    }
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FoodAndFarming.MOD_ID, name))));

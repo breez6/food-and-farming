@@ -6,6 +6,11 @@
   "item.food-and-farming.scrambled_eggs" : "Scrambled Eggs",
   "item.food-and-farming.fried_egg" : "Fried Egg",
   "item.food-and-farming.boiled_egg" : "Boiled Egg",
-  "item.food-and-farming.egg_shell" : "Egg Shell"
+  "item.food-and-farming.egg_shell" : "Egg Shell",
+  "item.food-and-farming.salt" : "Salt",
+  "item.food-and-farming.unripened_peppercorn" : "Unripened Peppercorn",
+  "item.food-and-farming.black_pepper" : "Black Pepper",
+  "item.food-and-farming.dried_peppercorn" : "Dried Peppercorn",
 
+  "block.food-and-farming.salt_rock" : "Salt Rock"
 }
